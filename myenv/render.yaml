@@ -1,10 +1,5 @@
-buildCommand:
-  - /opt/render/project/src/.venv/bin/python
-  - -m
-  - pip
-  - install
-  - --upgrade
-  - pip
+buildCommand: /opt/render/project/src/.venv/bin/python -m pip install --upgrade pip
+
 
 startCommand: /opt/render/project/src/.venv/bin/python app.py
 
