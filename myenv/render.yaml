@@ -6,7 +6,7 @@ buildCommand:
   - --upgrade
   - pip
 
-startCommand: /opt/render/project/src/.venv/bin/python your_app.py
+startCommand: /opt/render/project/src/.venv/bin/python app.py
 
 routes:
   - type: web
