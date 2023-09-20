@@ -1,0 +1,13 @@
+buildCommand:
+  - /opt/render/project/src/.venv/bin/python
+  - -m
+  - pip
+  - install
+  - --upgrade
+  - pip
+
+startCommand: /opt/render/project/src/.venv/bin/python your_app.py
+
+routes:
+  - type: web
+    source: /
