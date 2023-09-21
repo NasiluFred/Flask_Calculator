@@ -1,4 +1,4 @@
-from myenv import create_app
+from myenv.create_app import create_app
 
 app = create_app()
 

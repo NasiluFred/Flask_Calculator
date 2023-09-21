@@ -1,0 +1,35 @@
+from flask import Flask, render_template, request, redirect, url_for
+import os
+
+def create_app():
+     app = Flask(__name__)
+
+     env_config = os.getenv("PROD_APP_SETTINGS", "config.DevelopmentConfig")
+     app.config.from_object(env_config)
+
+     @app.route('/')
+     def home():
+          return render_template("index.html")
+
+     @app.route('/result', methods=['POST'])
+     def result():
+          num1 = float(request.form['num1'])
+          num2 = float(request.form['num2'])
+          result = num1 + num2
+          operation = request.form['operation']
+          if operation == 'addition':
+                result = num1 + num2
+          elif operation == "subtract":
+                result = num1 - num2
+          elif operation == "multiply":
+               result = num1 * num2
+          elif operation == 'division':
+            if num2 != 0:
+                 result = num1 / num2
+            else:
+                 result = "Error: Division by zero"
+                 
+     return render_template('result.html', result=result)
+
+
+
