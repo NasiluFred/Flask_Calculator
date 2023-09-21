@@ -6,7 +6,7 @@ from .config import Config
 app = Flask(__name__)
 
 #load configurations
-app.config.from_object( config)
+app.myenv.config.from_object( config)
 
 # import routing to render the pages
 
