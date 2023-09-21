@@ -3,6 +3,7 @@ import os
 
 app = Flask(__name__)
 
+from config import Config 
 env_config = os.getenv("PROD_APP_SETTINGS", "config.DevelopmentConfig")
 app.config.from_object(env_config)
 
