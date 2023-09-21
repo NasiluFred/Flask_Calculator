@@ -1,7 +1,7 @@
 buildCommand: /opt/render/project/src/.venv/bin/python -m pip install --upgrade pip
 
 
-startCommand: /opt/render/project/src/.venv/bin/python app.py
+startCommand: /opt/render/project/src/.venv/bin/python app_run.py
 
 routes:
   - type: web
