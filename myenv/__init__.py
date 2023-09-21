@@ -10,4 +10,4 @@ app.config.from_object( config)
 
 # import routing to render the pages
 
-from myflaskapp import views
+from myenv.myflaskapp import views
